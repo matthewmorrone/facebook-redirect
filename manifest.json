@@ -1,0 +1,16 @@
+{
+  "name" : "Facebook Redirect",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "description" : "Automatically redirects you to your messages page whenever you bring up facebook.",
+  "content_scripts" : [{
+    "matches" : [
+      "*://*.facebook.com/*"
+    ],
+    "js" : ["content.js"],
+    "run_at" : "document_start"
+  }],
+  "permissions": [
+    "*://*.facebook.com/*"
+  ]
+}

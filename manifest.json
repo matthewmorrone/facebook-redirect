@@ -1,16 +1,28 @@
 {
-  "name" : "Facebook Redirect",
-  "manifest_version": 2,
-  "version": "1.0.0",
-  "description" : "Automatically redirects you to your messages page whenever you bring up facebook.",
-  "content_scripts" : [{
-    "matches" : [
-      "*://*.facebook.com/*"
-    ],
-    "js" : ["content.js"],
-    "run_at" : "document_start"
-  }],
-  "permissions": [
-    "*://*.facebook.com/*"
-  ]
+	"name" : "Facebook Redirect",
+	"manifest_version": 2,
+	"version": "1.0.0",
+	"description" : "Automatically redirects you to your messages page whenever you bring up facebook.",
+	"icons": {
+		"16": "facebook-128.png",
+		"48": "facebook-128.png",
+		"128": "facebook-128.png"
+	},
+	// "browser_action": {
+	// 	"default_icon": {
+	// 		"19": "facebook-128.png",
+	// 		"38": "facebook-128.png"
+	// 	},
+	// 	"default_title": "Facebook Redirect"
+	// },
+	"content_scripts" : [{
+		"matches" : [
+			"*://*.facebook.com/*"
+		],
+		"js" : ["jquery.js", "content.js"],
+		"run_at" : "document_start"
+	}],
+	"permissions": [
+		"*://*.facebook.com/*"
+	]
 }

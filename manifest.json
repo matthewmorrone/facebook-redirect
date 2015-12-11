@@ -1,7 +1,7 @@
 {
 	"name" : "Facebook Redirect",
 	"manifest_version": 2,
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description" : "Automatically redirects you to your messages page whenever you bring up facebook.",
 	"icons": {
 		"16": "facebook-128.png",
@@ -12,10 +12,11 @@
 		"matches" : [
 			"*://*.facebook.com/*"
 		],
-		"js" : ["jquery.js", "content.js"],
+		"js" : [/*"jquery.js", */"content.js"],
 		"run_at" : "document_start"
 	}],
 	"permissions": [
-		"*://*.facebook.com/*"
+		"*://*.facebook.com/*",
+		"*://*.messenger.com/*"
 	]
 }

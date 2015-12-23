@@ -4,19 +4,41 @@
 	"version": "1.1.0",
 	"description" : "Automatically redirects you to your messages page whenever you bring up facebook.",
 	"icons": {
-		"16": "facebook-128.png",
-		"48": "facebook-128.png",
-		"128": "facebook-128.png"
+		"16": "img/on.png",
+		"48": "img/on.png",
+		"128": "img/on.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "img/on-19.png",
+			"38": "img/on-38.png"
+		},
+		"default_title": "Facebook Redirect"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
 	},
 	"content_scripts" : [{
 		"matches" : [
-			"*://*.facebook.com/*"
+			"*://*.facebook.com/*",
+			"*://*.messenger.com/*"
 		],
-		"js" : [/*"jquery.js", */"content.js"],
+		"js" : ["content.js"],
 		"run_at" : "document_start"
 	}],
 	"permissions": [
-		"*://*.facebook.com/*",
-		"*://*.messenger.com/*"
+		"storage",
+		"tabs", 
+		"activeTab", 
+		"webNavigation",
+		"webRequest",
+		"declarativeWebRequest",
+		"<all_urls>"
+		// "*://*/*"
+		// "http://*/*", 
+		// "https://*/*"
+		// "*://*.facebook.com/*",
+		// "*://*.messenger.com/*"
 	]
 }

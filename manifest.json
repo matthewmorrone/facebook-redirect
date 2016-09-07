@@ -33,12 +33,6 @@
 		"activeTab", 
 		"webNavigation",
 		"webRequest",
-		"declarativeWebRequest",
 		"<all_urls>"
-		// "*://*/*"
-		// "http://*/*", 
-		// "https://*/*"
-		// "*://*.facebook.com/*",
-		// "*://*.messenger.com/*"
 	]
 }
